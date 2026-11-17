@@ -59,12 +59,12 @@ def download(url, audio_format, output_dir, name, playlist):
 
     try:
         subprocess.run(command, check=True)
-        print("✅ Готово")
+        print("✅ Made it")
     except subprocess.CalledProcessError:
-        print("❌ Ошибка загрузки")
+        print("❌ Loading errors")
         sys.exit(1)
     finally:
-        print("🛑 Остановка сервера токенов...")
+        print("🛑 stopping server tokins...")
         try:
             os.killpg(os.getpgid(server_proc.pid), signal.SIGTERM)
         except ProcessLookupError:
