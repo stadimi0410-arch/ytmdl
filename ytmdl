@@ -83,7 +83,7 @@ def main():
         "--format",
         default="flac",
         choices=["mp3", "m4a", "opus", "flac"],
-        help="change format. defould is flac",
+        help="change format. defoult is flac",
     )
 
     parser.add_argument(
